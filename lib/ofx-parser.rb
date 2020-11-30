@@ -166,6 +166,7 @@ module OfxParser
       transaction.amount = (t/"TRNAMT").inner_text
       transaction.fit_id = (t/"FITID").inner_text
       transaction.payee = (t/"PAYEE").inner_text + (t/"NAME").inner_text
+      transaction.raw = (t).inner_html
       transaction.memo = (t/"MEMO").inner_text
       transaction.sic = (t/"SIC").inner_text
       transaction.check_number = (t/"CHECKNUM").inner_text unless (t/"CHECKNUM").inner_text.empty?
