@@ -119,10 +119,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '-11.11', transactions[0].amount
     assert_equal(-1111, transactions[0].amount_in_pennies)
     assert_equal '11111111 22', transactions[0].fit_id
-    assert_equal nil, transactions[0].check_number
+    assert_nil transactions[0].check_number
     assert_equal '<TRNTYPE>PAYMENT</TRNTYPE><DTPOSTED>20070606120000.000</DTPOSTED><TRNAMT>-11.11</TRNAMT><FITID>11111111 22</FITID><NAME>WEB AUTHORIZED PMT FOO INC</NAME><MEMO>Download from usbank.com. FOO INC</MEMO>', transactions[0].raw
-    assert_equal nil, transactions[0].sic
-    assert_equal nil, transactions[0].sic_desc
+    assert_nil transactions[0].sic
+    assert_nil transactions[0].sic_desc
     assert_equal 'WEB AUTHORIZED PMT FOO INC', transactions[0].payee
     assert_equal 'Download from usbank.com. FOO INC', transactions[0].memo
 
@@ -134,8 +134,8 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '22222A', transactions[1].fit_id
     assert_equal '0000009611', transactions[1].check_number
     assert_equal '<TRNTYPE>CHECK</TRNTYPE><DTPOSTED>20070607120000.000</DTPOSTED><TRNAMT>-111.11</TRNAMT><FITID>22222A</FITID><CHECKNUM>0000009611</CHECKNUM><NAME>CHECK</NAME><MEMO>Download from usbank.com.</MEMO>', transactions[1].raw
-    assert_equal nil, transactions[1].sic
-    assert_equal nil, transactions[1].sic_desc
+    assert_nil transactions[1].sic
+    assert_nil transactions[1].sic_desc
     assert_equal 'CHECK', transactions[1].payee
     assert_equal 'Download from usbank.com.', transactions[1].memo
 
@@ -145,10 +145,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '1111.11', transactions[2].amount
     assert_equal 111111, transactions[2].amount_in_pennies
     assert_equal 'X34AE33', transactions[2].fit_id
-    assert_equal nil, transactions[2].check_number
+    assert_nil transactions[2].check_number
     assert_equal '<TRNTYPE>DIRECTDEP</TRNTYPE><DTPOSTED>20070614120000.000</DTPOSTED><TRNAMT>1111.11</TRNAMT><FITID>X34AE33</FITID><NAME>ELECTRONIC DEPOSIT BAR INC</NAME><MEMO>Download from usbank.com. BAR INC</MEMO>', transactions[2].raw
-    assert_equal nil, transactions[2].sic
-    assert_equal nil, transactions[2].sic_desc
+    assert_nil transactions[2].sic
+    assert_nil transactions[2].sic_desc
     assert_equal 'ELECTRONIC DEPOSIT BAR INC', transactions[2].payee
     assert_equal 'Download from usbank.com. BAR INC', transactions[2].memo
 
@@ -158,10 +158,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '11.11', transactions[3].amount
     assert_equal 1111, transactions[3].amount_in_pennies
     assert_equal '8 8 9089743', transactions[3].fit_id
-    assert_equal nil, transactions[3].check_number
+    assert_nil transactions[3].check_number
     assert_equal '<TRNTYPE>CREDIT</TRNTYPE><DTPOSTED>20070619120000.000</DTPOSTED><TRNAMT>11.11</TRNAMT><FITID>8 8 9089743</FITID><NAME>ATM DEPOSIT US BANK ANYTOWNAS</NAME><MEMO>Download from usbank.com. US BANK ANYTOWN ASUS1</MEMO>', transactions[3].raw
-    assert_equal nil, transactions[3].sic
-    assert_equal nil, transactions[3].sic_desc
+    assert_nil transactions[3].sic
+    assert_nil transactions[3].sic_desc
     assert_equal 'ATM DEPOSIT US BANK ANYTOWNAS', transactions[3].payee
     assert_equal 'Download from usbank.com. US BANK ANYTOWN ASUS1', transactions[3].memo
 
@@ -201,10 +201,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '-11.11', transactions[0].amount
     assert_equal(-1111, transactions[0].amount_in_pennies)
     assert_equal '11111111 22', transactions[0].fit_id
-    assert_equal nil, transactions[0].check_number
+    assert_nil transactions[0].check_number
     assert_equal '<TRNTYPE>PAYMENT</TRNTYPE><DTPOSTED>20070606120000.000</DTPOSTED><TRNAMT>-11.11</TRNAMT><FITID>11111111 22</FITID><NAME>WEB AUTHORIZED PMT FOO INC</NAME><MEMO>Download from usbank.com. FOO INC</MEMO>', transactions[0].raw
-    assert_equal nil, transactions[0].sic
-    assert_equal nil, transactions[0].sic_desc
+    assert_nil transactions[0].sic
+    assert_nil transactions[0].sic_desc
     assert_equal 'WEB AUTHORIZED PMT FOO INC', transactions[0].payee
     assert_equal 'Download from usbank.com. FOO INC', transactions[0].memo
 
@@ -216,8 +216,8 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '22222A', transactions[1].fit_id
     assert_equal '0000009611', transactions[1].check_number
     assert_equal '<TRNTYPE>CHECK</TRNTYPE><DTPOSTED>20070607120000.000</DTPOSTED><TRNAMT>-111.11</TRNAMT><FITID>22222A</FITID><CHECKNUM>0000009611</CHECKNUM><NAME>CHECK</NAME><MEMO>Download from usbank.com.</MEMO>', transactions[1].raw
-    assert_equal nil, transactions[1].sic
-    assert_equal nil, transactions[1].sic_desc
+    assert_nil transactions[1].sic
+    assert_nil transactions[1].sic_desc
     assert_equal 'CHECK', transactions[1].payee
     assert_equal 'Download from usbank.com.', transactions[1].memo
 
@@ -227,10 +227,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '1111.11', transactions[2].amount
     assert_equal 111111, transactions[2].amount_in_pennies
     assert_equal 'X34AE33', transactions[2].fit_id
-    assert_equal nil, transactions[2].check_number
+    assert_nil transactions[2].check_number
     assert_equal '<TRNTYPE>DIRECTDEP</TRNTYPE><DTPOSTED>20070614120000.000</DTPOSTED><TRNAMT>1111.11</TRNAMT><FITID>X34AE33</FITID><NAME>ELECTRONIC DEPOSIT BAR INC</NAME><MEMO>Download from usbank.com. BAR INC</MEMO>', transactions[2].raw
-    assert_equal nil, transactions[2].sic
-    assert_equal nil, transactions[2].sic_desc
+    assert_nil transactions[2].sic
+    assert_nil transactions[2].sic_desc
     assert_equal 'ELECTRONIC DEPOSIT BAR INC', transactions[2].payee
     assert_equal 'Download from usbank.com. BAR INC', transactions[2].memo
 
@@ -240,10 +240,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '11.11', transactions[3].amount
     assert_equal 1111, transactions[3].amount_in_pennies
     assert_equal '8 8 9089743', transactions[3].fit_id
-    assert_equal nil, transactions[3].check_number
+    assert_nil transactions[3].check_number
     assert_equal '<TRNTYPE>CREDIT</TRNTYPE><DTPOSTED>20070619120000.000</DTPOSTED><TRNAMT>11.11</TRNAMT><FITID>8 8 9089743</FITID><NAME>ATM DEPOSIT US BANK ANYTOWNAS</NAME><MEMO>Download from usbank.com. US BANK ANYTOWN ASUS1</MEMO>', transactions[3].raw
-    assert_equal nil, transactions[3].sic
-    assert_equal nil, transactions[3].sic_desc
+    assert_nil transactions[3].sic
+    assert_nil transactions[3].sic_desc
     assert_equal 'ATM DEPOSIT US BANK ANYTOWNAS', transactions[3].payee
     assert_equal 'Download from usbank.com. US BANK ANYTOWN ASUS1', transactions[3].memo
 
@@ -255,8 +255,8 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '22222B', transactions[4].fit_id
     assert_equal '0000009612', transactions[4].check_number
     assert_equal '<TRNTYPE>DEBIT</TRNTYPE><DTPOSTED>20070608120000.000</DTPOSTED><TRNAMT>-111.12</TRNAMT><FITID>22222B</FITID><CHECKNUM>0000009612</CHECKNUM><NAME>GENERIC PAYMENT</NAME><MEMO>Download from San Diego Trust Bank</MEMO>', transactions[4].raw
-    assert_equal nil, transactions[4].sic
-    assert_equal nil, transactions[4].sic_desc
+    assert_nil transactions[4].sic
+    assert_nil transactions[4].sic_desc
     assert_equal 'GENERIC PAYMENT', transactions[4].payee
     assert_equal 'Download from San Diego Trust Bank', transactions[4].memo
 
@@ -287,10 +287,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '11.11', transactions[0].amount
     assert_equal 1111, transactions[0].amount_in_pennies
     assert_equal '8 8 9089743', transactions[0].fit_id
-    assert_equal nil, transactions[0].check_number
+    assert_nil transactions[0].check_number
     assert_equal '<TRNTYPE>CREDIT</TRNTYPE><DTPOSTED>20070619120000.000</DTPOSTED><TRNAMT>11.11</TRNAMT><FITID>8 8 9089743</FITID><NAME>ATM DEPOSIT US BANK ANYTOWNAS</NAME><MEMO>Download from usbank.com. US BANK ANYTOWN ASUS1</MEMO>', transactions[0].raw
-    assert_equal nil, transactions[0].sic
-    assert_equal nil, transactions[0].sic_desc
+    assert_nil transactions[0].sic
+    assert_nil transactions[0].sic_desc
     assert_equal 'ATM DEPOSIT US BANK ANYTOWNAS', transactions[0].payee
     assert_equal 'Download from usbank.com. US BANK ANYTOWN ASUS1', transactions[0].memo
 
@@ -325,7 +325,7 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '-19.17', transactions[0].amount
     assert_equal(-1917, transactions[0].amount_in_pennies)
     assert_equal 'xx', transactions[0].fit_id
-    assert_equal nil, transactions[0].check_number
+    assert_nil transactions[0].check_number
     assert_equal '<TRNTYPE>DEBIT</TRNTYPE><DTPOSTED>20070510170000</DTPOSTED><TRNAMT>-19.17</TRNAMT><FITID>xx</FITID><SIC>5912</SIC><NAME>WALGREEN      34638675 ANYTOWN</NAME>', transactions[0].raw
     assert_equal '5912', transactions[0].sic
     assert_equal OfxParser::Mcc::CODES['5912'], transactions[0].sic_desc
@@ -338,7 +338,7 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '-12.0', transactions[1].amount
     assert_equal(-1200, transactions[1].amount_in_pennies)
     assert_equal 'yy-56', transactions[1].fit_id
-    assert_equal nil, transactions[1].check_number
+    assert_nil transactions[1].check_number
     assert_equal '<TRNTYPE>DEBIT</TRNTYPE><DTPOSTED>20070512170000</DTPOSTED><TRNAMT>-12.0</TRNAMT><FITID>yy-56</FITID><SIC>7933</SIC><NAME>SUNSET BOWL            ANYTOWN</NAME>', transactions[1].raw
     assert_equal '7933', transactions[1].sic
     assert_equal OfxParser::Mcc::CODES['7933'], transactions[1].sic_desc
@@ -351,10 +351,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
     assert_equal '11.01', transactions[2].amount
     assert_equal 1101, transactions[2].amount_in_pennies
     assert_equal '78-9', transactions[2].fit_id
-    assert_equal nil, transactions[2].check_number
+    assert_nil transactions[2].check_number
     assert_equal '<TRNTYPE>CREDIT</TRNTYPE><DTPOSTED>20070526170000</DTPOSTED><TRNAMT>11.01</TRNAMT><FITID>78-9</FITID><SIC>0000</SIC><NAME>ELECTRONIC PAYMENT-THANK YOU</NAME>', transactions[2].raw
     assert_equal '0000', transactions[2].sic
-    assert_equal nil, transactions[2].sic_desc
+    assert_nil transactions[2].sic_desc
     assert_equal 'ELECTRONIC PAYMENT-THANK YOU', transactions[2].payee
     assert_equal '', transactions[2].memo
 
@@ -394,7 +394,7 @@ class OfxParserTest < MiniTest::Unit::TestCase
       assert_equal '-19.17', transactions[0].amount
       assert_equal(-1917, transactions[0].amount_in_pennies)
       assert_equal 'xx', transactions[0].fit_id
-      assert_equal nil, transactions[0].check_number
+      assert_nil transactions[0].check_number
       assert_equal '<TRNTYPE>DEBIT</TRNTYPE><DTPOSTED>20070510170000</DTPOSTED><TRNAMT>-19.17</TRNAMT><FITID>xx</FITID><SIC>5912</SIC><NAME>WALGREEN      34638675 ANYTOWN</NAME>', transactions[0].raw
       assert_equal '5912', transactions[0].sic
       assert_equal OfxParser::Mcc::CODES['5912'], transactions[0].sic_desc
@@ -407,7 +407,7 @@ class OfxParserTest < MiniTest::Unit::TestCase
       assert_equal '-12.0', transactions[1].amount
       assert_equal(-1200, transactions[1].amount_in_pennies)
       assert_equal 'yy-56', transactions[1].fit_id
-      assert_equal nil, transactions[1].check_number
+      assert_nil transactions[1].check_number
       assert_equal '<TRNTYPE>DEBIT</TRNTYPE><DTPOSTED>20070512170000</DTPOSTED><TRNAMT>-12.0</TRNAMT><FITID>yy-56</FITID><SIC>7933</SIC><NAME>SUNSET BOWL            ANYTOWN</NAME>', transactions[1].raw
       assert_equal '7933', transactions[1].sic
       assert_equal OfxParser::Mcc::CODES['7933'], transactions[1].sic_desc
@@ -420,10 +420,10 @@ class OfxParserTest < MiniTest::Unit::TestCase
       assert_equal '11.01', transactions[2].amount
       assert_equal 1101, transactions[2].amount_in_pennies
       assert_equal '78-9', transactions[2].fit_id
-      assert_equal nil, transactions[2].check_number
+      assert_nil transactions[2].check_number
       assert_equal '<TRNTYPE>CREDIT</TRNTYPE><DTPOSTED>20070526170000</DTPOSTED><TRNAMT>11.01</TRNAMT><FITID>78-9</FITID><SIC>0000</SIC><NAME>ELECTRONIC PAYMENT-THANK YOU</NAME>', transactions[2].raw
       assert_equal '0000', transactions[2].sic
-      assert_equal nil, transactions[2].sic_desc
+      assert_nil transactions[2].sic_desc
       assert_equal 'ELECTRONIC PAYMENT-THANK YOU', transactions[2].payee
       assert_equal '', transactions[2].memo
     end
