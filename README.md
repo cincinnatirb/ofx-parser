@@ -102,4 +102,4 @@ rake
 ## LICENSE:
 ofx-parser is Copyright © 2007 Andrew A. Smith. It is free
 software, and may be redistributed under the terms specified in the
-[LICENSE] file.
+[LICENSE](LICENSE) file.
